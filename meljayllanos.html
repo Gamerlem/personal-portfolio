@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meljayllanos.net</title>
+
+    <link rel="stylesheet" href="meljayllanos.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">MEL.</a>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#stats">About</a></li>
+                <li><a href="#">Resume</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div class="home-content">
+            <div class="home-side">
+                <h3>Hello, I am</h3>
+                <h1>Mel Jay Llanos</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam accusamus deserunt cumque culpa eveniet quia saepe totam quibusdam fugit?</p>
+                <a href="#" class="btn btn-primary mt-2">Hire Me</a>
+            </div>
+            <div class="home-picture">
+                <!-- <img src="images/profile-image.png" alt="profile-image"> -->
+            </div>
+        </div>
+
+        <div class="home-overlay-primary"></div>
+        <div class="home-overlay-secondary"></div>
+        <div class="home-overlay-tertiary"></div>
+    </section>
+
+    <section id="stats" class="stats">
+        <div class="stats-content">
+            <h2>Professionally coding for:</h2>
+            <h1>
+                <span id="stats-days">999</span><span id="stats-days-text">days</span>,
+                <span id="stats-hours">999</span><span id="stats-hours-text">hours</span>,
+                <span id="stats-minutes">59</span><span id="stats-minutes-text">minutes</span>, 
+                <span id="stats-seconds">59</span><span id="stats-seconds-text">seconds</span>
+            </h1>
+            <h3>
+                (
+                <span id="stats-years">999</span><span id="stats-years-text">years</span>, 
+                <span id="stats-months">999</span><span id="stats-months-text">months</span>
+                )
+            </h3>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-side">
+                <div class="about-side-label">
+                    <h6>A little bit</h6>
+                    <h1>ABOUT ME</h1>
+                </div>
+            </div>
+            <div class="about-main">
+                <div class="about-main-buttons">
+                    <a onclick="openInfo(event, 'about-info-1')" class="btn btn-secondary about-main-link active">Who I Am</a>
+                    <a onclick="openInfo(event, 'about-info-2')" class="btn btn-secondary about-main-link">Skillsets</a>
+                    <a onclick="openInfo(event, 'about-info-3')" class="btn btn-secondary about-main-link">Hobbies</a>
+                </div>
+                <div id="about-info-1" class="about-main-content active mt-2">
+                    <h1>Growth through practice, wisdom through experience</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nulla amet aut repellendus earum impedit, ab itaque est quasi labore corrupti assumenda esse dolorum, deserunt magni dignissimos eius at. Harum molestias ratione pariatur velit quibusdam porro quos, eaque incidunt, voluptatibus eius hic, reprehenderit repudiandae. Ratione veniam quibusdam exercitationem laboriosam laudantium.</p>
+                </div>
+                <div id="about-info-2" class="about-main-content mt-2">
+                    <h1>SkillSet</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nulla amet aut repellendus earum impedit, ab itaque est quasi labore corrupti assumenda esse dolorum, deserunt magni dignissimos eius at. Harum molestias ratione pariatur velit quibusdam porro quos, eaque incidunt, voluptatibus eius hic, reprehenderit repudiandae. Ratione veniam quibusdam exercitationem laboriosam laudantium.</p>
+                </div>
+                <div id="about-info-3" class="about-main-content mt-2">
+                    <h1>Hobbies</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nulla amet aut repellendus earum impedit, ab itaque est quasi labore corrupti assumenda esse dolorum, deserunt magni dignissimos eius at. Harum molestias ratione pariatur velit quibusdam porro quos, eaque incidunt, voluptatibus eius hic, reprehenderit repudiandae. Ratione veniam quibusdam exercitationem laboriosam laudantium.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="meljayllanos.js"></script>
+</body>
+
+</html>
