@@ -43,11 +43,21 @@ body {
 .mt-2 {
     margin-top: 2rem;
 }
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
 /* #endregion*/
 
 /* #region Common */
 section {
     padding: 0 10%;
+}
+
+.content-label h6 {
+    color: var(--primary-color);
+    font-size: 1rem;
+    line-height: 0.8rem;
 }
 
 .btn {
@@ -244,7 +254,7 @@ header {
 }
 
 .stats-content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 /* #endregion */
 
@@ -267,13 +277,9 @@ header {
     background-color: var(--secondary-color);
 }
 
-.about-side-label {
+.about-side .content-label {
     margin: auto;
     text-align: center;
-}
-
-.about-side-label h6 {
-    color: var(--primary-color);
 }
 
 .about-main {
@@ -290,6 +296,56 @@ header {
 
 .about-main-content.active {
     display: block;
+}
+/* #endregion */
+
+
+/* #region Resume */
+.resume-content {
+    min-height: 100vh;
+    padding: 10% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10%;
+
+}
+
+.resume-column {
+    width: 50%;
+    margin-bottom: auto;
+}
+
+.resume-box {
+    position: relative;
+    border-left: 2px solid var(--primary-color);
+    padding-bottom: 2rem;
+}
+
+.resume-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -0.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.resume-box-container {
+    padding-left: 2rem;
+}
+
+.resume-box-content {
+    padding: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 1rem;
+}
+
+.resume-box-content h5{
+    color: var(--primary-color);
 }
 /* #endregion */
 
