@@ -142,28 +142,29 @@ header {
 }
 
 .home-side {
-    max-width: 50%;
+    max-width: 55%;
 }
 
 .home-side h3 {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     font-weight: 500;
-    line-height: 0.5;
 }
 
 .home-side h1 {
-    font-size: 5.1rem;
+    font-size: 5rem;
     font-weight: 700;
 }
 
 .home-side p {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .home-picture {
-    margin-left: auto;
-    height: 35rem;
-    width: 35rem;
+    margin: auto;
+    height: 25rem;
+    width: 25rem;
     display: flex;
     align-items: center;
     background-color: var(--secondary-color);
@@ -178,15 +179,14 @@ header {
     border-radius: 20%;
 } */
 
-.home-overlay-primary {
+/* .home-overlay-primary {
     position: absolute;
     right: 0;
     bottom: 0;
-    min-height: 100vh;
+    height: 100vh;
     border: 50vh solid var(--primary-color);
     border-top: 50vh solid transparent;
     border-left: 50vh solid transparent;
-
     z-index: -1;
 }
 
@@ -210,7 +210,7 @@ header {
     border-top: 54vh solid transparent;
     border-left: 54vh solid transparent;
     z-index: -3;
-}
+} */
 /* #endregion */
 
 /* #region Stats */
@@ -227,6 +227,9 @@ header {
 }
 
 .stats-content h1 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
     font-size: 3rem;
 }
 /* #endregion */
@@ -257,7 +260,7 @@ header {
 
 .about-main {
     width: 60%;
-    padding: 5%;
+    padding: 3%;
     display: flex;
     flex-direction: column;
     background-color: var(--light-color);
@@ -265,6 +268,7 @@ header {
 
 .about-main-content {
     display: none;
+    overflow-x: auto;
 }
 
 .about-main-content.active {
@@ -502,7 +506,49 @@ footer {
 }
 /* #endregion */
 
-@media only screen and (max-width : 768px) {
+
+/* for laptop (1024 - 1440 res) */
+@media only screen and (max-width : 1439px) {
+    section {
+        padding: 0 5%;
+    }
+
+    /* #region Header */
+    header {
+        padding: 1rem 5%;
+    }
+    /* #endregion */
+
+    /* #region Home */
+    .home-side h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    
+    .home-side h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+    }
+    
+    .home-side p {
+        font-size: 1.2rem;
+    }
+
+    .home-picture {
+        height: 20rem;
+        width: 20rem;
+    }
+    /* #endregion */
+
+    /* #region Stats */
+    .stats-content h1 {
+        font-size: 2rem;
+    }
+    /* #endregion */
+}
+
+/* for tablets (768 - 1023 res) */
+@media only screen and (max-width : 1023px) {
     /* #region Header */
     .hamburger {
         display: block;
@@ -539,6 +585,121 @@ footer {
         margin: 2rem auto;
         padding: 0;
         text-align: center;
+    }
+    /* #endregion */
+
+    /* #region Home */
+    .home-content {
+        flex-direction: column;
+    }
+
+    .home-side {
+        /* padding-top: 8rem; */
+        max-width: 100%;
+    }
+
+    .home-picture {
+        height: 20rem;
+        width: 20rem;
+    }
+    /* #endregion */
+
+    /* #region Stats */
+    .stats-content h1 {
+        font-size: 1.7rem;
+    }
+    /* #endregion */
+
+    /* #region About */
+    .about-content {
+        padding: 5% 1%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about-side {
+        width: 100%;
+        min-height: 20%;
+    }
+    
+    .about-main {
+        width: 100%;
+        min-height: 80%;
+    }
+    /* #endregion */
+
+    /* #region Resume */
+    .resume-content {
+        flex-direction: column;
+        row-gap: 2.5rem;
+    }
+
+    .resume-column {
+        width: 100%;
+    }
+    /* #endregion */
+
+    /* #region Showcase */
+    .showcase-box {
+        flex-direction: column;
+    }
+
+    .showcase-box-side {
+        width: 100%;
+    }
+
+    .showcase-box-main {
+        width: 100%;
+    }
+    /* #endregion */
+
+    /* #region Contact */
+    .contact-content {
+        padding: 10% 3%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-side {
+        width: 100%;
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0;
+    }
+
+    .contact-main {
+        width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+    }
+    /* #endregion */
+}
+
+/* for mobile (767 below) */
+@media only screen and (max-width : 767px) {
+    /* #region Home */
+    .home-picture {
+        height: 15rem;
+        width: 15rem;
+    }
+    /* #endregion */
+
+    /* #region Stats */
+    .stats-content h2 {
+        font-size: 1.2rem;
+    }
+    .stats-content h1 {
+        flex-direction: column;
+        text-align: center;
+    }
+    .stats-content h3 {
+        font-size: 0.87rem;
+    }
+    /* #endregion */
+
+    /* #region Footer */
+    .footer-info h5 {
+        font-size: 0.5rem;
     }
     /* #endregion */
 }
