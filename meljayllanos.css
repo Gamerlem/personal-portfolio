@@ -24,6 +24,7 @@ body {
 /* #region Common */
 section {
     padding: 0 10%;
+    scroll-margin-top: 10vh;
 }
 
 .content-label h6 {
@@ -34,18 +35,29 @@ section {
 
 .btn {
     display: inline-block;
-    padding: 0.8rem 2.4rem;
+    width: 100%;
+    padding: 0.8rem 0;
+    border-style: none;
     font-size: 1.3rem;
     font-weight: 400;
+    text-align: center;
     cursor: pointer;
+    user-select: none;
+}
+
+.btn-sm {
+    width: 25%;
+}
+
+.btn-flex {
+    width: 100%;
+    padding: 0.8rem 0;
 }
 
 .btn-primary {
     background-color: var(--primary-color);
     border: solid 1px var(--primary-color);
     color: var(--light-color);
-    /* border-radius: 0.6rem; */
-    /* box-shadow: 0 0.2rem 0.5rem var(--tertiary-color); */
 }
 
 .btn-primary:hover {
@@ -63,13 +75,6 @@ section {
     background-color: var(--primary-color);
     color: var(--light-color);
 }
-
-.btn-secondary.active {
-    background-color: var(--primary-color);
-    color: var(--light-color);
-}
-
-
 /* #endregion */
 
 /* #region Header */
@@ -77,11 +82,13 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    min-height: 10vh;
+    max-height: 10vh;
     width: 100%;
     padding: 1rem 10%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    column-gap: 5%;
     align-items: center;
     background-color: var(--light-color);
     box-shadow: 0 0.1rem 0.3rem var(--dark-color);
@@ -116,6 +123,7 @@ header {
     font-size: 1.2rem;
     color: var(--dark-color);
     font-weight: 500;
+    user-select: none;
 }
 
 .nav-links li a.active::before {
@@ -134,8 +142,12 @@ header {
 /* #endregion */
 
 /* #region Home */
+.home {
+    margin: 10vh 0;
+}
+
 .home-content {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -143,6 +155,9 @@ header {
 
 .home-side {
     max-width: 55%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
 }
 
 .home-side h3 {
@@ -151,14 +166,13 @@ header {
 }
 
 .home-side h1 {
+    line-height: 100%;
     font-size: 5rem;
     font-weight: 700;
 }
 
 .home-side p {
     font-size: 1.25rem;
-    text-align: justify;
-    text-justify: inter-word;
 }
 
 .home-picture {
@@ -215,22 +229,26 @@ header {
 
 /* #region Stats */
 .stats-content {
-    height: 35vh;
+    min-height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 #stats-days, #stats-hours, #stats-minutes, #stats-seconds {
     color: var(--primary-color);
 }
 
+.stats-content h2 {
+    font-size: 2rem;
+}
 .stats-content h1 {
-    display: flex;
-    flex-direction: row;
-    column-gap: 0.5rem;
     font-size: 3rem;
+}
+.stats-content h3 {
+    font-size: 1.5rem;
 }
 /* #endregion */
 
@@ -240,8 +258,8 @@ header {
 }
 
 .about-content {
-    height: 65vh;
-    padding: 5%;
+    min-height: 60vh;
+    padding: 5% 0;
     display: flex;
     flex-direction: row;
 }
@@ -263,34 +281,48 @@ header {
     padding: 3%;
     display: flex;
     flex-direction: column;
+    row-gap: 1rem;
     background-color: var(--light-color);
+}
+
+.about-main-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .about-main-content {
     display: none;
-    overflow-x: auto;
+}
+
+.about-main-content p {
+    text-align: justify;
 }
 
 .about-main-content.active {
-    display: block;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
 }
 /* #endregion */
 
 /* #region Resume */
 .resume-content {
-    min-height: 100vh;
-    padding: 10% 0;
+    min-height: 90vh;
+    padding: 10%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     column-gap: 10%;
-
 }
 
 .resume-column {
     width: 50%;
     margin-bottom: auto;
+}
+
+.resume-column > .content-label {
+    margin-bottom: 1rem;
 }
 
 .resume-box {
@@ -315,6 +347,9 @@ header {
 }
 
 .resume-box-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
     padding: 1rem;
     border: 1px solid var(--primary-color);
     border-radius: 1rem;
@@ -331,14 +366,13 @@ header {
 }
 
 .showcase-content {
-    min-height: 100vh;
-    padding: 7% 0;
+    min-height: 90vh;
+    padding: 5% 10%;
     display: flex;
     flex-direction: column;
 }
 
 .showcase-content > .content-label {
-    padding: 1rem 0;
     border-bottom: 1px solid var(--light-color);
 }
 
@@ -374,25 +408,35 @@ header {
 }
 
 .showcase-box-main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
     width: 70%;
     padding: 2% 5%;
     background-color: var(--light-color);
+}
+
+.showcase-box-main-buttons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
 }
 /* #endregion */
 
 /* #region Contact */
 .contact-content {
-    min-height: 90vh;
-    padding: 10%;
+    min-height: 80vh;
+    padding: 0 10%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .contact-content > .content-label {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 1% 0;
+    padding-bottom: 2.5%;
 }
 
 .contact-container {
@@ -407,16 +451,16 @@ header {
     flex-direction: column;
     color: var(--light-color);
     background-color: var(--primary-color);
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    /* border-top-left-radius: 1rem; */
+    /* border-bottom-left-radius: 1rem; */
 }
 
 .contact-main {
     width: 60%;
     padding: 5%;
     border: 1px solid var(--primary-color);
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    /* border-top-right-radius: 1rem; */
+    /* border-bottom-right-radius: 1rem; */
 }
 
 .contact-form {
@@ -509,9 +553,11 @@ footer {
 
 /* for laptop (1024 - 1440 res) */
 @media only screen and (max-width : 1439px) {
+    /* #region Common */
     section {
         padding: 0 5%;
     }
+    /* #endregion */
 
     /* #region Header */
     header {
@@ -541,8 +587,14 @@ footer {
     /* #endregion */
 
     /* #region Stats */
+    .stats-content h2 {
+        font-size: 1.66rem;
+    }
     .stats-content h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+    .stats-content h3 {
+        font-size: 1.25rem;
     }
     /* #endregion */
 }
@@ -591,6 +643,7 @@ footer {
     /* #region Home */
     .home-content {
         flex-direction: column;
+        padding: 5% 0;
     }
 
     .home-side {
@@ -605,20 +658,26 @@ footer {
     /* #endregion */
 
     /* #region Stats */
+    .stats-content h2 {
+        font-size: 1.13rem;
+    }
     .stats-content h1 {
         font-size: 1.7rem;
+    }
+    .stats-content h3 {
+        font-size: 0.85rem;
     }
     /* #endregion */
 
     /* #region About */
     .about-content {
-        padding: 5% 1%;
         flex-direction: column;
         justify-content: center;
     }
     .about-side {
         width: 100%;
         min-height: 20%;
+        padding: 2.5rem;
     }
     
     .about-main {
@@ -630,7 +689,7 @@ footer {
     /* #region Resume */
     .resume-content {
         flex-direction: column;
-        row-gap: 2.5rem;
+        row-gap: 1rem;
     }
 
     .resume-column {
@@ -654,7 +713,7 @@ footer {
 
     /* #region Contact */
     .contact-content {
-        padding: 10% 3%;
+        padding: 5% 0;
     }
 
     .contact-container {
@@ -663,20 +722,30 @@ footer {
 
     .contact-side {
         width: 100%;
-        border-top-right-radius: 1rem;
-        border-bottom-left-radius: 0;
+        /* border-top-right-radius: 1rem; */
+        /* border-bottom-left-radius: 0; */
     }
 
     .contact-main {
         width: 100%;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 1rem;
+        /* border-top-right-radius: 0; */
+        /* border-bottom-left-radius: 1rem; */
     }
     /* #endregion */
 }
 
 /* for mobile (767 below) */
 @media only screen and (max-width : 767px) {
+    /* #region Common */
+    .btn {
+        font-size: 1rem;
+    }
+
+    .btn-sm {
+        width: 50%;
+    }
+    /* #endregion */
+
     /* #region Home */
     .home-picture {
         height: 15rem;
@@ -686,14 +755,13 @@ footer {
 
     /* #region Stats */
     .stats-content h2 {
-        font-size: 1.2rem;
+        font-size: 0.98rem;
     }
     .stats-content h1 {
-        flex-direction: column;
-        text-align: center;
+        font-size: 1.5rem;
     }
     .stats-content h3 {
-        font-size: 0.87rem;
+        font-size: 0.74rem;
     }
     /* #endregion */
 
