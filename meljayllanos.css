@@ -46,12 +46,7 @@ section {
 }
 
 .btn-sm {
-    width: 25%;
-}
-
-.btn-flex {
-    width: 100%;
-    padding: 0.8rem 0;
+    width: 35%;
 }
 
 .btn-primary {
@@ -142,12 +137,8 @@ header {
 /* #endregion */
 
 /* #region Home */
-.home {
-    margin: 10vh 0;
-}
-
 .home-content {
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -179,61 +170,17 @@ header {
     margin: auto;
     height: 25rem;
     width: 25rem;
-    display: flex;
-    align-items: center;
-    background-color: var(--secondary-color);
-    border: solid 1px var(--primary-color);
+    border: 5px solid var(--primary-color);
     border-radius: 50%;
 }
-
-/* .home-picture img {
-    height: 40rem;
-    margin: auto;
-    width: 40rem;
-    border-radius: 20%;
-} */
-
-/* .home-overlay-primary {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 100vh;
-    border: 50vh solid var(--primary-color);
-    border-top: 50vh solid transparent;
-    border-left: 50vh solid transparent;
-    z-index: -1;
-}
-
-.home-overlay-secondary {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-height: 100vh;
-    border: 52vh solid var(--secondary-color);
-    border-top: 52vh solid transparent;
-    border-left: 52vh solid transparent;
-    z-index: -2;
-}
-
-.home-overlay-tertiary {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-height: 100vh;
-    border: 54vh solid var(--tertiary-color);
-    border-top: 54vh solid transparent;
-    border-left: 54vh solid transparent;
-    z-index: -3;
-} */
 /* #endregion */
 
 /* #region Stats */
 .stats-content {
-    min-height: 30vh;
+    min-height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
 }
 
@@ -243,12 +190,10 @@ header {
 
 .stats-content h2 {
     font-size: 2rem;
+    font-weight: 500;
 }
 .stats-content h1 {
     font-size: 3rem;
-}
-.stats-content h3 {
-    font-size: 1.5rem;
 }
 /* #endregion */
 
@@ -258,7 +203,7 @@ header {
 }
 
 .about-content {
-    min-height: 60vh;
+    min-height: 65vh;
     padding: 5% 0;
     display: flex;
     flex-direction: row;
@@ -352,11 +297,22 @@ header {
     row-gap: 0.5rem;
     padding: 1rem;
     border: 1px solid var(--primary-color);
-    border-radius: 1rem;
+    border-radius: 0.4rem;
 }
 
-.resume-box-content h5{
+.resume-box-content h5 {
     color: var(--primary-color);
+}
+
+.resume-box-content .tag {
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: var(--secondary-color);
+    border-radius: 0.4rem;
+
 }
 /* #endregion */
 
@@ -451,16 +407,12 @@ header {
     flex-direction: column;
     color: var(--light-color);
     background-color: var(--primary-color);
-    /* border-top-left-radius: 1rem; */
-    /* border-bottom-left-radius: 1rem; */
 }
 
 .contact-main {
     width: 60%;
     padding: 5%;
     border: 1px solid var(--primary-color);
-    /* border-top-right-radius: 1rem; */
-    /* border-bottom-right-radius: 1rem; */
 }
 
 .contact-form {
@@ -593,9 +545,6 @@ footer {
     .stats-content h1 {
         font-size: 2.5rem;
     }
-    .stats-content h3 {
-        font-size: 1.25rem;
-    }
     /* #endregion */
 }
 
@@ -643,11 +592,12 @@ footer {
     /* #region Home */
     .home-content {
         flex-direction: column;
-        padding: 5% 0;
+        row-gap: 2.5rem;
+        padding-top: calc(10vh + 5%);
+        padding-bottom: 5%;
     }
 
     .home-side {
-        /* padding-top: 8rem; */
         max-width: 100%;
     }
 
@@ -663,9 +613,6 @@ footer {
     }
     .stats-content h1 {
         font-size: 1.7rem;
-    }
-    .stats-content h3 {
-        font-size: 0.85rem;
     }
     /* #endregion */
 
@@ -722,14 +669,10 @@ footer {
 
     .contact-side {
         width: 100%;
-        /* border-top-right-radius: 1rem; */
-        /* border-bottom-left-radius: 0; */
     }
 
     .contact-main {
         width: 100%;
-        /* border-top-right-radius: 0; */
-        /* border-bottom-left-radius: 1rem; */
     }
     /* #endregion */
 }
@@ -759,9 +702,6 @@ footer {
     }
     .stats-content h1 {
         font-size: 1.5rem;
-    }
-    .stats-content h3 {
-        font-size: 0.74rem;
     }
     /* #endregion */
 
