@@ -1,8 +1,34 @@
 // #region Header
-hamburger = document.querySelector(".hamburger");
-hamburger.onclick = function () {
-    navBar = document.querySelector(".nav-bar");
-    navBar.classList.toggle("active");
+const header = document.getElementsByTagName("header");
+const navbar = document.querySelector(".nav-bar");
+const navbarLinks = document.querySelectorAll(".nav-links li a");
+const hamburger = document.querySelector(".hamburger");
+
+window.onscroll = updateHeaderBackground;
+hamburger.onclick = showHamburgerNavbarMenu;
+
+function updateHeaderBackground() {
+    if (window.scrollY >= 60 || navbar.classList.contains('active')) {
+        if(!header[0].classList.contains('colored')) {
+            header[0].classList.add('colored');
+
+            navbarLinks.forEach((link) => {
+                if(!link.classList.contains('colored')) {
+                    link.classList.add('colored');
+                }
+            })
+        }
+    } else {
+        header[0].classList.remove('colored');
+        navbarLinks.forEach((link) => {
+            link.classList.remove('colored');
+        })
+    }
+}
+
+function showHamburgerNavbarMenu () {
+    navbar.classList.toggle("active");
+    updateHeaderBackground();
 }
 // #endregion
 
