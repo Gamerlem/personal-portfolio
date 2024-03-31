@@ -36,6 +36,27 @@ section > div {
     line-height: 0.8rem;
 }
 
+.tech-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    align-items: center;
+}
+
+.tech-container img {
+    height: 2rem;
+    width: 2rem;
+    object-fit: contain;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tech-container img:hover {
+    transform: scale(1.2);
+}
+
 .btn {
     display: inline-block;
     width: 100%;
@@ -309,25 +330,6 @@ header.colored {
 #about-info-1 button {
     margin-top: 1.2rem;
 }
-
-#about-info-2 .tech-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 0.5rem;
-}
-
-#about-info-2 .tech-container img {
-    height: 2rem;
-    width: 2rem;
-    object-fit: contain;
-    cursor: pointer;
-    user-select: none;
-}
-
-#about-info-2 .tech-container img:hover {
-    transform: scale(1.2);
-}
 /* #endregion */
 
 /* #region Stats */
@@ -414,13 +416,13 @@ header.colored {
 
 .resume-box-content .tag {
     width: fit-content;
+    margin-top: 1rem;
     padding: 0.5rem 1rem;
     color: var(--primary-color);
     font-size: 0.8rem;
     font-weight: 500;
     background-color: var(--secondary-color);
     border-radius: 0.4rem;
-
 }
 /* #endregion */
 
