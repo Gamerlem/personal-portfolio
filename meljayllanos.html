@@ -17,13 +17,11 @@
     <header>
         <a href="#home" class="logo">MEL.</a>
         <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+            <i class='bx bx-menu'></i>
         </div>
         <nav class="nav-bar">
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#showcase">Projects</a></li>
@@ -62,9 +60,9 @@
             </div>
             <div class="about-main">
                 <div class="about-main-buttons">
-                    <button class="btn btn-secondary about-main-link" onclick="openInfo(event, 'about-info-1')">Profile</button>
-                    <button class="btn btn-secondary about-main-link" onclick="openInfo(event, 'about-info-2')">Skills</button>
-                    <button class="btn btn-secondary about-main-link" onclick="openInfo(event, 'about-info-3')">Hobbies</button>
+                    <button class="btn btn-tertiary about-main-link active" onclick="openInfo(event, 'about-info-1')">Profile</button>
+                    <button class="btn btn-tertiary about-main-link" onclick="openInfo(event, 'about-info-2')">Skills</button>
+                    <button class="btn btn-tertiary about-main-link" onclick="openInfo(event, 'about-info-3')">Hobbies</button>
                 </div>
                 <div id="about-info-1" class="about-main-content active">
                     <h1>Solutions-driven software developer</h1>
@@ -75,7 +73,7 @@
                         <p><strong>Location:</strong> Cebu City, Philippines</p>
                         <p><strong>Email:</strong> mel.jay.llanos@gmail.com</p>
                     </div>
-                    <button class="btn icon btn-sm btn-primary"><i class='bx bxs-download' ></i>Download CV</button>
+                    <button class="btn icon btn-sm btn-primary" onclick="viewResume()"><i class='bx bx-file-find' ></i>View CV</button>
                 </div>
                 <div id="about-info-2" class="about-main-content">
                     <h1>Front End</h1>
@@ -109,6 +107,8 @@
                         <img src="images/logo-git.png" title="Git" alt="git">
                         <img src="images/logo-postman.png" title="Postman" alt="postman">
                     </div>
+                    <h1>But...</h1>
+                    <p>My skills does not end there! I am actively learning new trends and technologies and expanding my knowledge to the best I can!</p>
                 </div>
                 <div id="about-info-3" class="about-main-content">
                     <h1>Outside work</h1>
@@ -236,7 +236,7 @@
                             <img src="images/logo-js.png" title="Javascript" alt="js">
                         </div>
                         <div class="showcase-box-main-buttons">
-                            <a class="btn icon btn-sm btn-primary"><i class='bx bx-file-find' ></i>View</a>
+                            <a href="#home" class="btn icon btn-sm btn-primary"><i class='bx bx-file-find' ></i>View</a>
                             <a class="btn icon btn-sm btn-secondary"><i class='bx bx-code-alt'></i>Code</a>
                         </div>
                     </div>
@@ -254,7 +254,7 @@
                             <img src="images/logo-tensorflow.png" title="Tensorflow" alt="tensorflow">
                         </div>
                         <div class="showcase-box-main-buttons">
-                            <a class="btn icon btn-sm btn-primary"><i class='bx bx-file-find' ></i>View</a>
+                            <a href="https://ieeexplore.ieee.org/document/9681447" target="_blank" class="btn icon btn-sm btn-primary"><i class='bx bx-file-find' ></i>View</a>
                         </div>
                     </div>
                 </div>
@@ -271,7 +271,7 @@
                             <img src="images/logo-tensorflow.png" title="Tensorflow" alt="tensorflow">
                         </div>
                         <div class="showcase-box-main-buttons">
-                            <a class="btn icon btn-sm btn-primary"><i class='bx bx-file-find' ></i>View</a>
+                            <a href="https://ieeexplore.ieee.org/document/9936806" target="_blank" class="btn icon btn-sm btn-primary"><i class='bx bx-file-find' ></i>View</a>
                         </div>
                     </div>
                 </div>
@@ -298,7 +298,7 @@
                         <a href="https://www.linkedin.com/in/mel-jay-llanos-306a3b243" target="_blank"><i class='bx bxl-linkedin'></i></a>
                         <a href="https://github.com/Gamerlem" target="_blank"><i class='bx bxl-github'></i></a>
                     </div>
-                    <a class="btn icon btn-secondary"><i class='bx bxs-send'></i></i>Send an email</a>
+                    <button class="btn icon btn-secondary" onclick="sendEmail()"><i class='bx bxs-send'></i></i>Send an email</button>
                 </div>
                 <div class="contact-main">
                     <iframe class="contact-location" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1417394.8723043536!2d124.56581061005663!3d10.210260850337948!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99bfd6fa3d7f5%3A0xe4f1d258010efbd5!2s294%20Sanciangko%20St%2C%20Cebu%20City%2C%206000%20Cebu!5e0!3m2!1sen!2sph!4v1712086030157!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
