@@ -107,6 +107,32 @@ section > div {
 
 .mini-overlay {
     position: absolute;
+}
+
+.mini-overlay.left {
+    left: -9vw;
+}
+
+.mini-overlay.right {
+    right: 1vw;
+}
+
+.left .mini-overlay-bx1,
+.left .mini-overlay-bx2,
+.left .mini-overlay-bx3 {
+    transform: rotate(-35deg);
+}
+
+.right .mini-overlay-bx1,
+.right .mini-overlay-bx2,
+.right .mini-overlay-bx3 {
+    transform: rotate(35deg);
+}
+
+.mini-overlay-bx1,
+.mini-overlay-bx2,
+.mini-overlay-bx3 {
+    position: absolute;
     height: 10vw;
     width: 10vw;
     background-color: var(--primary-color);
@@ -114,17 +140,21 @@ section > div {
     border-radius: 20%;
 }
 
-.mini-overlay.left {
-    left: -8%;
-    transform: rotate(-30deg);
+.mini-overlay-bx1 {
+    top: 0;
 }
 
-.mini-overlay.right {
-    right: -8%;
-    transform: rotate(60deg);
+.mini-overlay-bx2 {
+    top: 3vw;
 }
 
-.mini-overlay.light {
+.mini-overlay-bx3 {
+    top: 6vw;
+}
+
+.light .mini-overlay-bx1,
+.light .mini-overlay-bx2,
+.light .mini-overlay-bx3 {
     background-color: transparent;
     border: solid 1px var(--light-color);
 }
@@ -253,6 +283,11 @@ header.colored {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    cursor: pointer;
+}
+
+.home-picture img:hover {
+    transform: scale(1.02);
 }
 
 .home-overlay {
@@ -264,42 +299,25 @@ header.colored {
 }
 
 .home-overlay.primary {
-    /* clip-path: polygon(100% 5%, 50% 100%, 100% 100%); */
-    /* clip-path: polygon(100% 0, 100% 100%, 46% 100%, 98% 10%, 92% 0); */
-    /* clip-path: polygon(100% 0, 100% 100%, 90% 100%, 98% 90%, 46% 0); */
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 99%, 84% 99%, 94% 84%, 46% 0);
     background-color: var(--primary-color);
     z-index: -10;
 }
 
 .home-overlay.secondary {
-    /* clip-path: polygon(100% 2.5%, 47.5% 100%, 100% 100%); */
-    /* clip-path: polygon(100% 0, 100% 100%, 44% 100%, 96% 10%, 90% 0); */
     clip-path: polygon(100% 0, 100% 100%, 81.5% 100%, 92% 84%, 44% 0);
-    /* clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 98%, 84% 98%, 92% 85.5%, 44% 0); */
     background-color: var(--secondary-color);
     z-index: -11;
 }
 
 .home-overlay.tertiary {
-    /* clip-path: polygon(100% 0, 45% 100%, 100% 100%); */
-    /* clip-path: polygon(100% 0, 100% 100%, 42% 100%, 94% 10%, 88% 0); */
     clip-path: polygon(100% 0, 100% 100%, 79.5% 100%, 90% 84%, 42% 0);
-    /* clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 97%, 84% 97%, 90% 87%, 42% 0); */
     background-color: var(--tertiary-color);
     z-index: -12;
 }
 
-.home-content > .mini-overlay.primary {
-    bottom: 9rem;
-}
-
-.home-content > .mini-overlay.secondary {
-    bottom: 6rem;
-}
-
-.home-content > .mini-overlay.tertiary {
-    bottom: 3rem;
+.home-content > .grp1 {
+    bottom: 18vw;
 }
 /* #endregion */
 
@@ -378,12 +396,12 @@ header.colored {
     margin-top: 1.2rem;
 }
 
-.about-content > .mini-overlay.primary {
-    top: 10%;
+.about-content > .grp1 {
+    top: 5%;
 }
 
-.about-content > .mini-overlay.secondary {
-    bottom: 10%;
+.about-content > .grp2 {
+    bottom: 18vw;
 }
 /* #endregion */
 
@@ -417,8 +435,8 @@ header.colored {
     font-size: 3rem;
 }
 
-.stats-content > .mini-overlay.primary {
-    top: 10%;
+.stats-content > .grp1 {
+    top: 5%;
 }
 /* #endregion */
 
@@ -486,16 +504,16 @@ header.colored {
     border-radius: 0.4rem;
 }
 
-.resume-content > .mini-overlay.primary {
-    top: 10%;
+.resume-content > .grp1 {
+    top: 5%;
 }
 
-.resume-content > .mini-overlay.secondary {
+.resume-content > .grp2 {
     top: 40%;
 }
 
-.resume-content > .mini-overlay.tertiary {
-    bottom: 10%;
+.resume-content > .grp3 {
+    bottom: 18vw;
 }
 /* #endregion */
 
@@ -562,16 +580,16 @@ header.colored {
     column-gap: 1rem;
 }
 
-.showcase-content > .mini-overlay.primary {
-    top: 10%;
+.showcase-content > .grp1 {
+    top: 5%;
 }
 
-.showcase-content > .mini-overlay.secondary {
+.showcase-content > .grp2 {
     top: 40%;
 }
 
-.showcase-content > .mini-overlay.tertiary {
-    bottom: 10%;
+.showcase-content > .grp3 {
+    bottom: 18vw;
 }
 /* #endregion */
 
@@ -663,12 +681,12 @@ header.colored {
     border: none;
 }
 
-.contact-content > .mini-overlay.primary {
-    top: 10%;
+.contact-content > .grp1 {
+    top: 5%;
 }
 
-.contact-content > .mini-overlay.secondary {
-    bottom: 10%;
+.contact-content > .grp2 {
+    bottom: 18vw;
 }
 /* #endregion */
 
@@ -822,20 +840,14 @@ footer {
     }
 
     .home-overlay.primary {
-        /* clip-path: polygon(100% 0, 30% 0, 100% 95%); */
-        /* clip-path: polygon(100% 0, 100% 100%, 90% 100%, 98% 90%, 30% 0); */
         clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 99%, 84% 99%, 94% 84%, 30% 0);
     }
     
     .home-overlay.secondary {
-        /* clip-path: polygon(100% 0, 27.5% 0, 100% 97.5%); */
-        /* clip-path: polygon(100% 0, 100% 100%, 88% 100%, 96% 90%, 28% 0); */
         clip-path: polygon(100% 0, 100% 100%, 81.5% 100%, 92% 84%, 28% 0);
     }
     
     .home-overlay.tertiary {
-        /* clip-path: polygon(100% 0, 25% 0, 100% 100%); */
-        /* clip-path: polygon(100% 0, 100% 100%, 86% 100%, 94% 90%, 26% 0); */
         clip-path: polygon(100% 0, 100% 100%, 79.5% 100%, 90% 84%, 26% 0);
     }
 
