@@ -12,8 +12,15 @@
     --primary-color: #4A0A85;
     --secondary-color: #D3D3D3;
     --tertiary-color: #E0E0E0;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
     --light-color: #FFFFFF;
     --dark-color: #000000;
+}
+
+.dark-theme {
+    --light-color: #000000;
+    --dark-color: #ffffff;
 }
 
 body {
@@ -80,7 +87,7 @@ section > div {
 .btn-primary {
     background-color: var(--primary-color);
     border: solid 1px var(--primary-color);
-    color: var(--light-color);
+    color: var(--white-color);
 }
 
 .btn-primary:hover {
@@ -103,6 +110,11 @@ section > div {
     background-color: transparent;
     border: solid 1px var(--tertiary-color);
     color: var(--primary-color);
+}
+
+.btn-icon {
+    color: var(--white-color);
+    background-color: transparent;
 }
 
 .mini-overlay {
@@ -188,6 +200,10 @@ header {
 }
 
 .nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     user-select: none;
 }
@@ -203,7 +219,7 @@ header {
 
 .nav-links li a {
     font-size: 1.2rem;
-    color: var(--light-color);
+    color: var(--white-color);
     font-weight: 500;
 }
 
@@ -222,6 +238,10 @@ header.colored {
 }
 
 .nav-links li a.colored {
+    color: var(--dark-color);
+}
+
+.nav-actions button.colored {
     color: var(--dark-color);
 }
 /* #endregion */
@@ -299,19 +319,19 @@ header.colored {
 }
 
 .home-overlay.primary {
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 99%, 84% 99%, 94% 84%, 46% 0);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 99%, 84% 99%, 94% 84%, 40% 0);
     background-color: var(--primary-color);
     z-index: -10;
 }
 
 .home-overlay.secondary {
-    clip-path: polygon(100% 0, 100% 100%, 81.5% 100%, 92% 84%, 44% 0);
+    clip-path: polygon(100% 0, 100% 100%, 81.5% 100%, 92% 84%, 38% 0);
     background-color: var(--secondary-color);
     z-index: -11;
 }
 
 .home-overlay.tertiary {
-    clip-path: polygon(100% 0, 100% 100%, 79.5% 100%, 90% 84%, 42% 0);
+    clip-path: polygon(100% 0, 100% 100%, 79.5% 100%, 90% 84%, 36% 0);
     background-color: var(--tertiary-color);
     z-index: -12;
 }
@@ -344,6 +364,10 @@ header.colored {
 .about-side .content-label {
     margin: auto;
     text-align: center;
+}
+
+.about-side .content-label h1 {
+    color: var(--black-color);
 }
 
 .about-main {
@@ -539,7 +563,7 @@ header.colored {
 }
 
 .showcase-content > .content-label h1 {
-    color: var(--light-color);
+    color: var(--white-color);
 }
 
 .showcase-items {
@@ -620,7 +644,7 @@ header.colored {
     padding: 3%;
     display: flex;
     flex-direction: column;
-    color: var(--light-color);
+    color: var(--white-color);
     background-color: var(--primary-color);
 }
 
@@ -631,7 +655,7 @@ header.colored {
 }
 
 .contact-info p i {
-    border: 1px solid var(--light-color);
+    border: 1px solid var(--white-color);
     border-radius: 50%;
     padding: 1%;
     margin: 0.5rem 0;
@@ -654,9 +678,9 @@ header.colored {
     align-items: center;
     height: 2.5rem;
     width: 2.5rem;
-    color: var(--light-color);
+    color: var(--white-color);
     font-size: 1.5rem;
-    border: 1px solid var(--light-color);
+    border: 1px solid var(--white-color);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -701,7 +725,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: var(--light-color);
+    color: var(--white-color);
 }
 
 .footer-info {
@@ -789,6 +813,7 @@ footer {
     }
 
     .nav-bar {
+        flex-direction: column;
         position: absolute;
         top: 10vh;
         left: 0;

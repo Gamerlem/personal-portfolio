@@ -2,8 +2,10 @@
 const header = document.getElementsByTagName("header");
 const navbar = document.querySelector(".nav-bar");
 const navbarLinks = document.querySelectorAll(".nav-links li a");
+const navbarButtons = document.querySelectorAll(".nav-actions button");
 const hamburger = document.querySelector(".hamburger");
 const hamburgerIcon = document.querySelector(".hamburger i");
+const colorModeIcon = document.querySelector("#colorModeToggle i");
 const sections = document.querySelectorAll("section");
 
 // scroll effect
@@ -11,7 +13,7 @@ window.onscroll = onScrollEffect;
 function onScrollEffect() {
     // for header 
     const currentTop = window.scrollY;
-    const headerOffset = Math.ceil(window.innerHeight * 0.11);
+    const headerOffset = Math.ceil(window.innerHeight * 0.10);
     const scrollOffset = Math.ceil(window.innerHeight * 0.01);
 
     if (currentTop >= headerOffset || navbar.classList.contains("active")) {
@@ -22,13 +24,22 @@ function onScrollEffect() {
                 if(!link.classList.contains("colored")) {
                     link.classList.add("colored");
                 }
-            })
+            });
+
+            navbarButtons.forEach((button) => {
+                if(!button.classList.contains("colored")) {
+                    button.classList.add("colored");
+                }
+            });
         }
     } else {
         header[0].classList.remove("colored");
         navbarLinks.forEach((link) => {
             link.classList.remove("colored");
-        })
+        });
+        navbarButtons.forEach((button) => {
+            button.classList.remove("colored");
+        });
     }
 
     // for header and section interaction
@@ -74,6 +85,17 @@ function showHamburgerNavbarMenu () {
     }
 
     onScrollEffect();
+}
+
+function changeMode(event) {
+    event.currentTarget.classList.toggle("dark-theme");
+    document.body.classList.toggle("dark-theme");
+
+    if(event.currentTarget.classList.contains("dark-theme")) {
+        colorModeIcon.classList = "bx bx-sun";
+    } else {
+        colorModeIcon.classList = "bx bx-moon";
+    }
 }
 // #endregion
 
