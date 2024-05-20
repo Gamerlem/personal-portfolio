@@ -58,17 +58,6 @@ function onScrollEffect() {
             if(activeNavbarLink) {
                 activeNavbarLink.classList.add("active");
             }
-
-            // update current url
-            const location = window.location.toString().split("#")[0];
-            const newLocation = location + "#" + sectionId;
-            const targetLocation = activeNavbarLink ? newLocation : location;
-
-            if(history && history.replaceState) {
-                if(window.location.toString() !== targetLocation) {
-                    history.replaceState(null, null, targetLocation);
-                }
-            }
         }
     });
 }
