@@ -161,7 +161,7 @@ function openInfo(event, infoName) {
 }
 
 function viewResume() {
-    window.open("files/Mel Jay Llanos - Resume.pdf", "_blank");
+    window.open("files/MelJayLlanos_Resume.pdf", "_blank");
 }
 // #endregion
 
